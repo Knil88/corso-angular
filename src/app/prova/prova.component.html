@@ -1,0 +1,25 @@
+
+
+    <!-- <button mat-raised-button [disabled]='isDisabled' (click)="onClick()" color="primary">Primary</button> -->
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="title"/>
+       
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="onClick()">Cambia</button>
+    
+     <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+      <ng-template #bloccoIf>
+        <p>
+          Sono visibile
+        </p>
+      </ng-template>
+      <ng-template #bloccoElse>
+        <p>
+          non sono visibile
+        </p>
+      </ng-template>
+
+    
+    
